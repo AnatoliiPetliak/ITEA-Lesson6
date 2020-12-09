@@ -1,16 +1,7 @@
-import {
-  REMOVE_TODO,
-  ADD_TODO,
-  TOGGLE_TODO,
-  CHANGE_LOCALE,
-} from "../constants/index";
-
-import config from "../config";
+import { REMOVE_TODO, ADD_TODO, TOGGLE_TODO } from "../constants/index";
 
 const initState = {
   todos: [],
-
-  locale: config.defaultLang,
 };
 
 const reducer = (state = initState, action) => {
@@ -41,13 +32,6 @@ const reducer = (state = initState, action) => {
           }
         }),
       };
-
-    case CHANGE_LOCALE:
-      return {
-        ...state,
-        locale: action.payload,
-      };
-
     default:
       return state;
   }

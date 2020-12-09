@@ -15,7 +15,7 @@ class Todos extends Component {
 
   submitData = (e) => {
     e.preventDefault();
-    if (this.state.title != "") {
+    if (this.state.title !== "") {
       const { title } = this.state;
       const { addTodo } = this.props;
       addTodo(title);

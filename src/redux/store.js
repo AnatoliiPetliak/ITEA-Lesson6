@@ -1,5 +1,5 @@
 import { createStore, compose } from "redux";
-import reducer from "../reducers";
+import reducer from "../reducers/index";
 
 const composeEnhancers =
   process.env.NODE_ENV !== "production" &&

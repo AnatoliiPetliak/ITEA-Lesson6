@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { REMOVE_TODO, TOGGLE_TODO } from "../constants/index";
+
 import "./TodoList.css";
 
 class TodoList extends Component {
@@ -14,12 +15,11 @@ class TodoList extends Component {
       <div className="todoListMain">
         <div className="header">
           {todos.map((todo, index) => {
-            console.log(this.props.todos);
             return (
               <div key={index} className="list_style">
                 <li
                   className="todo"
-                  style={todo.completed == true ? resolvedClass : {}}
+                  style={todo.completed === true ? resolvedClass : {}}
                   onClick={() => toggleTodo(todo.id)}>
                   {todo.title}
                 </li>
